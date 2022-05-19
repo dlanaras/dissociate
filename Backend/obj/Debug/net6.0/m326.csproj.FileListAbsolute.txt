@@ -1,0 +1,15 @@
+/home/dlanaras/Documents/VsCode/m326/bin/Debug/net6.0/m326
+/home/dlanaras/Documents/VsCode/m326/bin/Debug/net6.0/m326.deps.json
+/home/dlanaras/Documents/VsCode/m326/bin/Debug/net6.0/m326.runtimeconfig.json
+/home/dlanaras/Documents/VsCode/m326/bin/Debug/net6.0/m326.dll
+/home/dlanaras/Documents/VsCode/m326/bin/Debug/net6.0/ref/m326.dll
+/home/dlanaras/Documents/VsCode/m326/bin/Debug/net6.0/m326.pdb
+/home/dlanaras/Documents/VsCode/m326/obj/Debug/net6.0/m326.csproj.AssemblyReference.cache
+/home/dlanaras/Documents/VsCode/m326/obj/Debug/net6.0/m326.GeneratedMSBuildEditorConfig.editorconfig
+/home/dlanaras/Documents/VsCode/m326/obj/Debug/net6.0/m326.AssemblyInfoInputs.cache
+/home/dlanaras/Documents/VsCode/m326/obj/Debug/net6.0/m326.AssemblyInfo.cs
+/home/dlanaras/Documents/VsCode/m326/obj/Debug/net6.0/m326.csproj.CoreCompileInputs.cache
+/home/dlanaras/Documents/VsCode/m326/obj/Debug/net6.0/m326.dll
+/home/dlanaras/Documents/VsCode/m326/obj/Debug/net6.0/ref/m326.dll
+/home/dlanaras/Documents/VsCode/m326/obj/Debug/net6.0/m326.pdb
+/home/dlanaras/Documents/VsCode/m326/obj/Debug/net6.0/m326.genruntimeconfig.cache
