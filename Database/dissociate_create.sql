@@ -1,3 +1,0 @@
-DROP DATABASE IF EXISTS dissociate;
-
-CREATE DATABASE dissociate;
