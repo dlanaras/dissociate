@@ -14,13 +14,13 @@
     <main class="container">
         <aside class="servers">
             <div class="servers-collection">
-                <div class="server focusable server-friends active" role="button" aria-label="Friends">
+                <div class="server focusable server-friends" role="button" aria-label="Friends">
                     <div class="server-icon" onclick="changewebsite('friends')"><svg><use xlink:href="#icon-friends" /></svg></div>
                 </div>
             </div>
 
             <div class="servers-collection">
-                <div class="server focusable unread" role="button" aria-label="Discord Developers unread">
+                <div class="server focusable active" role="button" aria-label="Discord Developers unread">
                     <div class="server-icon" onclick="changewebsite('elmo')"><img src="../img/server1.webp" /></div>
                 </div>
             </div>
@@ -140,6 +140,75 @@
             </div>
         </aside>
 
+        <aside class="channels">
+            <header class="channels-header focusable">
+                <h3 role="header" class="channels-header-name">Elmo Folterkeller</h3>
+                <svg role="button" aria-label="Dropdown" class="channels-header-dropdown"><use xlink:href="#icon-dropdown" /></svg>
+            </header>
+
+            <section class="channels-list">
+                <header class="channels-list-header focusable">
+                    <h5>Text Channels</h5>
+                </header>
+
+                <ul class="channels-list-text">
+                    <li class="channel focusable channel-text active">
+                        <span class="channel-name">general</span>
+                        <button class="button" role="button" aria-label="Invite"><svg><use xlink:href="#icon-invite" /></svg></button>
+                        <button class="button" role="button" aria-label="settings"><svg><use xlink:href="#icon-channel-settings" /></svg></button>
+                    </li>
+
+                    <li class="channel focusable channel-text">
+                        <span class="channel-name">Eingangshalle</span>
+                        <button class="button" role="button" aria-label="Invite"><svg><use xlink:href="#icon-invite" /></svg></button>
+                        <button class="button" role="button" aria-label="settings"><svg><use xlink:href="#icon-channel-settings" /></svg></button>
+                    </li>
+
+                    <li class="channel focusable channel-text">
+                        <span class="channel-name">Elmos Büro</span>
+                        <button class="button" role="button" aria-label="Invite"><svg><use xlink:href="#icon-invite" /></svg></button>
+                        <button class="button" role="button" aria-label="settings"><svg><use xlink:href="#icon-channel-settings" /></svg></button>
+                    </li>
+                </ul>
+
+                <header class="channels-list-header focusable">
+                    <h5>Voice Channels</h5>
+                </header>
+                <ul class="channels-list-voice">
+                    <li class="channel focusable channel-text">
+                        <span class="channel-name">höllenfeuer</span>
+                        <button class="button" role="button" aria-label="Invite"><img src="../img/tel.svg"></button>
+                        <button class="button" role="button" aria-label="settings"><svg><use xlink:href="#icon-channel-settings" /></svg></button>
+                    </li>
+
+                    <li class="channel focusable channel-text">
+                        <span class="channel-name">Schatzkammer</span>
+                        <button class="button" role="button" aria-label="Invite"><img src="../img/tel.svg"></button>
+                        <button class="button" role="button" aria-label="settings"><svg><use xlink:href="#icon-channel-settings" /></svg></button>
+                    </li>
+
+                    <li class="channel focusable channel-text">
+                        <span class="channel-name">Besprechungsraum</span>
+                        <button class="button" role="button" aria-label="Invite"><img src="../img/tel.svg"></button>
+                        <button class="button" role="button" aria-label="settings"><svg><use xlink:href="#icon-channel-settings" /></svg></button>
+                    </li>
+                </ul>
+            </section>
+
+            <footer class="channels-footer">
+                <img class="avatar" alt="Avatar" src="https://cdn.dribbble.com/users/75302/screenshots/11323797/media/964a31c33fd532c1cbd5c912767aa815.jpg?compress=1&resize=400x300" />
+                <div class="channels-footer-details">
+                    <span class="username">yourself</span>
+                    <span class="tag">#0001</span>
+                </div>
+                <div class="channels-footer-controls button-group">
+                    <button role="button" aria-label="Mute" class="button button-mute"><svg><use xlink:href="#icon-mute" /></svg></button>
+                    <button role="button" aria-label="Deafen" class="button button-deafen"><svg><use xlink:href="#icon-deafen" /></svg></button>
+                    <button role="button" aria-label="Settings" class="button button-settings"><svg><use xlink:href="#icon-settings" /></svg></button>
+                </div>
+            </footer>
+        </aside>
+
 
         <div class="vert-container">
             <menu type="toolbar" class="menu">
@@ -147,97 +216,7 @@
             </menu>
 
             <section class="chat">
-                <figure class="snip1336">
-                    <img src="../img/armstrong_background.jpg" alt="sample87" height="230px" />
-                    <figcaption>
-                        <img src="../img/armstrong_pb.jpg" alt="profile-sample4" class="profile" width="90px" height="90px" />
-                        <h2>Steven Armstrong<span>US-Senator</span></h2>
-                        <p>The weak will be purged, and the strongest will thrive -- free to live as they see fit, they'll make America great again!</p>
-                        <a href="#" class="follow">Chat</a>
-                        <a href="#" class="info">Add Friend</a>
-                    </figcaption>
-                </figure>
-                <figure class="snip1336 hover"><img src="../img/heavy_background.png" alt="sample74" height="230px" />
-                    <figcaption>
-                        <img src="../img/heavy_pb.jpg" alt="profile-sample2" class="profile" width="90px" height="90px" />
-                        <h2>Heavy<span>Pootis</span></h2>
-                        <p>Ya da da da! Best thing! Heavy owns best thing! It is his, do not touch, or he will kill you! Da dum da dum dum!" (laughs)</p>
-                        <a href="#" class="follow">Chat</a>
-                        <a href="#" class="info">Add Friend</a>
-                    </figcaption>
-                </figure>
-                <figure class="snip1336"><img src="../img/elon_background.jpg" alt="sample69" height="230px" />
-                    <figcaption>
-                        <img src="../img/elon_pb.jpg" alt="profile-sample5" class="profile profilesize" width="90px" height="90px" />
-                        <h2>Elona Musk<span>Company Owner</span></h2>
-                        <p>People should pursue what they're passionate about. That will make them happier than pretty much anything else. </p>
-                        <a href="#" class="follow">Chat</a>
-                        <a href="#" class="info">Add Friend</a>
-                    </figcaption>
-                </figure>
-                <figure class="snip1336"><img src="../img/sam_background.jpg" alt="sample69" height="230px" />
-                    <figcaption>
-                        <img src="../img/sam_pb.jpg" alt="profile-sample5" class="profile profilesize" width="90px" height="90px" />
-                        <h2>Jestream Sam<span>criminal</span></h2>
-                        <p>If you want to stay dad you've got to polish your image. I think the image we need to create for you is "repentant but learning".</p>
-                        <a href="#" class="follow">Chat</a>
-                        <a href="#" class="info">Add Friend</a>
-                    </figcaption>
-                </figure>
-                <figure class="snip1336"><img src="../img/monsoon_background.jpg" alt="sample69" height="230px" />
-                    <figcaption>
-                        <img src="../img/monsoon_pb.jpg" alt="profile-sample5" class="profile profilesize" width="90px" height="90px" />
-                        <h2>Monsoon<span>Criminal</span></h2>
-                        <p>If you want to stay dad you've got to polish your image. I think the image we need to create for you is "repentant but learning".</p>
-                        <a href="#" class="follow">Chat</a>
-                        <a href="#" class="info">Add Friend</a>
-                    </figcaption>
-                </figure>
-                <figure class="snip1336"><img src="../img/sundowner_background.jpg" alt="sample69" height="230px" />
-                    <figcaption>
-                        <img src="../img/sundowner_pb.png" alt="profile-sample5" class="profile profilesize" width="90px" height="90px" />
-                        <h2>Sundowner<span>Criminal</span></h2>
-                        <p>If you want to stay dad you've got to polish your image. I think the image we need to create for you is "repentant but learning".</p>
-                        <a href="#" class="follow">Chat</a>
-                        <a href="#" class="info">Add Friend</a>
-                    </figcaption>
-                </figure>
-                <figure class="snip1336"><img src="../img/spee_background.png" alt="sample69" height="230px" />
-                    <figcaption>
-                        <img src="../img/spee_pb.png" alt="profile-sample5" class="profile profilesize" width="90px" height="90px" />
-                        <h2>Spee<span>Spy</span></h2>
-                        <p>If you want to stay dad you've got to polish your image. I think the image we need to create for you is "repentant but learning".</p>
-                        <a href="#" class="follow">Chat</a>
-                        <a href="#" class="info">Add Friend</a>
-                    </figcaption>
-                </figure>
-                <figure class="snip1336"><img src="../img/saul_background.jpg" alt="sample69" height="230px" />
-                    <figcaption>
-                        <img src="../img/saul_pb.jpg" alt="profile-sample5" class="profile profilesize" width="90px" height="90px" />
-                        <h2>Saul Goodman<span>Lawyer</span></h2>
-                        <p>If you want to stay dad you've got to polish your image. I think the image we need to create for you is "repentant but learning".</p>
-                        <a href="#" class="follow">Chat</a>
-                        <a href="#" class="info">Add Friend</a>
-                    </figcaption>
-                </figure>
-                <figure class="snip1336"><img src="../img/wok_background.jpg" alt="sample69" height="230px" />
-                    <figcaption>
-                        <img src="../img/wok_pb.jpg" alt="profile-sample5" class="profile profilesize" width="90px" height="90px" />
-                        <h2>The Wok<span>Wrestler</span></h2>
-                        <p>If you want to stay dad you've got to polish your image. I think the image we need to create for you is "repentant but learning".</p>
-                        <a href="#" class="follow">Chat</a>
-                        <a href="#" class="info">Add Friend</a>
-                    </figcaption>
-                </figure>
-                <figure class="snip1336"><img src="../img/capy_background.jpg" alt="sample69" height="230px" />
-                    <figcaption>
-                        <img src="../img/capy_pb.jpg" alt="profile-sample5" class="profile profilesize" width="90px" height="90px" />
-                        <h2>Capybara<span>Mafia Boss</span></h2>
-                        <p>If you want to stay dad you've got to polish your image. I think the image we need to create for you is "repentant but learning".</p>
-                        <a href="#" class="follow">Chat</a>
-                        <a href="#" class="info">Add Friend</a>
-                    </figcaption>
-                </figure>
+
 
             </section>
         </div>
