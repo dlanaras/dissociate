@@ -266,9 +266,14 @@
 
     var iconNew = '../img/drawing_dot.svg';
     var title = 'Dissociate';
+    var counter = document.querySelectorAll("div.unread").length;
+
+    if (document.querySelectorAll("div.unread").length) {
+        counter = '9+'
+    }
 
     function changeTitle() {
-        var newTitle = ' [' + document.querySelectorAll("div.unread").length + '] - ' + title;
+        var newTitle = ' [' + counter + '] - ' + title;
         document.title = newTitle;
     }
 
