@@ -2,9 +2,12 @@ using Dissociate.Models;
 using System;
 using Microsoft.AspNetCore.Mvc;
 using Dissociate.Contexts;
+using Microsoft.AspNetCore.Cors;
 
 namespace Dissociate.Controllers
 {
+
+    [EnableCors("MyAllowSpecificOrigins")]
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class DissociateController : ControllerBase

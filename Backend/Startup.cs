@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Dissociate.Contexts;
+using Microsoft.AspNetCore.Builder;
 
 namespace Dissociate
 {
@@ -22,8 +22,6 @@ namespace Dissociate
             services.AddDbContext<DissociateContext>(options =>
                 options.UseSqlite("Data Source=dissociate.db")); //TODO: add config file for this
 
-            services.AddDatabaseDeveloperPageExceptionFilter();
-
             services.AddControllersWithViews();
             services.AddDistributedMemoryCache();
             services.AddSession(
@@ -37,13 +35,13 @@ namespace Dissociate
 
             services.AddCors(options =>
             {
-                options.AddPolicy(name: MyAllowSpecificOrigins,
+                options.AddPolicy("MyAllowSpecificOrigins",
                         policy =>
                         {
                             policy.WithOrigins("https://localhost:4200")
-                                    .AllowHeaders("cookie", "set-cookie")
-                                    .AllowAnyMethod("GET", "POST")
-                                    .AllowCredentials();
+                               .AllowAnyHeader()
+                               .AllowAnyMethod()
+                               .AllowCredentials();
                         });
             });
         }
@@ -62,7 +60,7 @@ namespace Dissociate
 
             app.UseCors();
 
-            app.Use(async (context, next) =>
+            /*app.Use(async (context, next) =>
             {
                 if (context.WebSockets.IsWebSocketRequest)
                 {
@@ -73,7 +71,7 @@ namespace Dissociate
                 {
                     context.Response.StatusCode = StatusCodes.Status400BadRequest;
                 }
-            });
+            });*/
 
             app.Run();
 

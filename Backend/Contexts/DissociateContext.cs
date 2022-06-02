@@ -30,13 +30,13 @@ namespace Dissociate.Contexts
                 .IsUnique();
 
             modelBuilder.Entity<Message>()
-                .HasOne(m => m.AccountMessages)
+                .HasOne(m => m.AccountMessage)
                 .WithOne(am => am.Message)
                 .HasForeignKey(am => am.MessageId);
 
             modelBuilder.Entity<Account>()
                 .HasMany(a => a.Friends)
-                .WithMany()
+                .WithMany(a => a.Friends)
                 .Map(m =>
                 {
                     m.ToTable("AccountFriends");
