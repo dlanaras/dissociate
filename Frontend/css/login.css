@@ -6,6 +6,8 @@
 
 body {
     background: #23272a;
+    font-family: "Advent Pro", arial;
+    margin: 0px;
 }
 
 #container {
@@ -383,10 +385,6 @@ h1.cyberpunk.glitched:before {
 
  ::-webkit-resizer {
     display: none;
-}
-
-body * {
-    font-family: "Advent Pro", arial;
 }
 
 .cybr-btn {
