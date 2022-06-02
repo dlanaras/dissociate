@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/dlanaras/Documents/VsCode/m326/m326.csproj": {}
+    "/home/dlanaras/Documents/VsCode/m326/Backend/m326.csproj": {}
   },
   "projects": {
-    "/home/dlanaras/Documents/VsCode/m326/m326.csproj": {
+    "/home/dlanaras/Documents/VsCode/m326/Backend/m326.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dlanaras/Documents/VsCode/m326/m326.csproj",
+        "projectUniqueName": "/home/dlanaras/Documents/VsCode/m326/Backend/m326.csproj",
         "projectName": "m326",
-        "projectPath": "/home/dlanaras/Documents/VsCode/m326/m326.csproj",
+        "projectPath": "/home/dlanaras/Documents/VsCode/m326/Backend/m326.csproj",
         "packagesPath": "/home/dlanaras/.nuget/packages/",
-        "outputPath": "/home/dlanaras/Documents/VsCode/m326/obj/",
+        "outputPath": "/home/dlanaras/Documents/VsCode/m326/Backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/dlanaras/.nuget/NuGet/NuGet.Config"
@@ -38,9 +38,45 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Extensions.Configuration": {
+              "target": "Package",
+              "version": "[0.0.4, )"
+            },
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.1, )"
             }
           },
           "imports": [
@@ -54,6 +90,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

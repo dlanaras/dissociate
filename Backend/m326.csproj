@@ -8,7 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Extensions.Configuration" Version="0.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.5" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
   </ItemGroup>
 
 </Project>
