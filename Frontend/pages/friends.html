@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/friends.css">
     <script src="../js/friends.js"></script>
+    <link id="favicon" rel="icon" href="../img/drawing.svg">
     <title>Dissociate</title>
 </head>
 
@@ -13,7 +14,7 @@
     <main class="container">
         <aside class="servers">
             <div class="servers-collection">
-                <div class="server focusable server-friends active" role="button" aria-label="Friends unread">
+                <div class="server focusable server-friends active" role="button" aria-label="Friends">
                     <div class="server-icon" onclick="changewebsite('friends')"><svg><use xlink:href="#icon-friends" /></svg></div>
                 </div>
             </div>
@@ -25,13 +26,13 @@
             </div>
 
             <div class="servers-collection">
-                <div class="server focusable" role="button" aria-label="Discord Developers unread">
+                <div class="server focusable" role="button" aria-label="Discord Developers">
                     <div class="server-icon"><img src="../img/server2.jpg" /></div>
                 </div>
             </div>
 
             <div class="servers-collection">
-                <div class="server focusable" role="button" aria-label="Discord Developers unread">
+                <div class="server focusable" role="button" aria-label="Discord Developers">
                     <div class="server-icon"><img src="../img/server3.jpg" /></div>
                 </div>
             </div>
@@ -43,19 +44,19 @@
             </div>
 
             <div class="servers-collection">
-                <div class="server focusable" role="button" aria-label="Discord Developers unread">
+                <div class="server focusable" role="button" aria-label="Discord Developers">
                     <div class="server-icon"><img src="../img/server5.jpg" /></div>
                 </div>
             </div>
 
             <div class="servers-collection">
-                <div class="server focusable" role="button" aria-label="Discord Developers unread">
+                <div class="server focusable" role="button" aria-label="Discord Developers">
                     <div class="server-icon"><img src="../img/server6.jpg" /></div>
                 </div>
             </div>
 
             <div class="servers-collection">
-                <div class="server focusable" role="button" aria-label="Discord Developers unread">
+                <div class="server focusable" role="button" aria-label="Discord Developers">
                     <div class="server-icon"><img src="../img/server7.jpg" /></div>
                 </div>
             </div>
@@ -73,7 +74,7 @@
             </div>
 
             <div class="servers-collection">
-                <div class="server focusable" role="button" aria-label="Discord Developers unread">
+                <div class="server focusable" role="button" aria-label="Discord Developers">
                     <div class="server-icon"><img src="../img/server10.jpg" /></div>
                 </div>
             </div>
@@ -85,7 +86,7 @@
             </div>
 
             <div class="servers-collection">
-                <div class="server focusable" role="button" aria-label="Discord Developers unread">
+                <div class="server focusable" role="button" aria-label="Discord Developers">
                     <div class="server-icon"><img src="../img/server12.jpg" /></div>
                 </div>
             </div>
@@ -97,13 +98,13 @@
             </div>
 
             <div class="servers-collection">
-                <div class="server focusable" role="button" aria-label="Discord Developers unread">
+                <div class="server focusable" role="button" aria-label="Discord Developers">
                     <div class="server-icon"><img src="../img/server14.jpg" /></div>
                 </div>
             </div>
 
             <div class="servers-collection">
-                <div class="server focusable" role="button" aria-label="Discord Developers unread">
+                <div class="server focusable" role="button" aria-label="Discord Developers">
                     <div class="server-icon"><img src="../img/server 15.jpg" /></div>
                 </div>
             </div>
@@ -115,13 +116,13 @@
             </div>
 
             <div class="servers-collection">
-                <div class="server focusable" role="button" aria-label="Discord Developers unread">
+                <div class="server focusable" role="button" aria-label="Discord Developers">
                     <div class="server-icon"><img src="../img/server17.jpg" /></div>
                 </div>
             </div>
 
             <div class="servers-collection">
-                <div class="server focusable" role="button" aria-label="Discord Developers unread">
+                <div class="server focusable" role="button" aria-label="Discord Developers">
                     <div class="server-icon"><img src="../img/server18.jpg" /></div>
                 </div>
             </div>
@@ -233,8 +234,26 @@
 </body>
 <script>
     function changewebsite(website) {
-        window.location = '../pages/friends.html';
+        window.location = '../pages/' + website + '.html';
     }
+
+    var iconNew = '../img/drawing_dot.svg';
+    var title = 'Dissociate';
+
+    function changeTitle() {
+        var newTitle = ' [' + document.querySelectorAll("div.unread").length + '] ' + title;
+        document.title = newTitle;
+    }
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        changeTitle();
+
+        if (document.querySelectorAll("div.unread").length > 0) {
+            document.getElementById('favicon').href = iconNew;
+        }
+
+    });
 </script>
 
 </html>
