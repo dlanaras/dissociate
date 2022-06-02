@@ -490,6 +490,7 @@ svg[id] {
     text-align: left;
     line-height: 1.4em;
     background-color: #141414;
+    border-radius: 40px;
 }
 
 .snip1336 * {
@@ -507,7 +508,7 @@ svg[id] {
 
 .snip1336 figcaption {
     width: 100%;
-    background-color: #141414;
+    background-color: #1e2124;
     padding: 25px;
     position: relative;
 }
@@ -521,7 +522,7 @@ svg[id] {
     height: 0;
     border-style: solid;
     border-width: 55px 0 0 400px;
-    border-color: transparent transparent transparent #141414;
+    border-color: transparent transparent transparent #1e2124;
 }
 
 .snip1336 figcaption a {
