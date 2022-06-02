@@ -19,7 +19,6 @@ namespace Dissociate.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Blog>()
             modelBuilder.Entity<Account>()
                 .HasMany(a => a.AccountMessages)
                 .WithOne(am => am.Account)
@@ -32,17 +31,18 @@ namespace Dissociate.Contexts
             modelBuilder.Entity<Message>()
                 .HasOne(m => m.AccountMessage)
                 .WithOne(am => am.Message)
-                .HasForeignKey(am => am.MessageId);
+                .HasForeignKey<AccountMessage>(am => am.MessageId);
 
-            modelBuilder.Entity<Account>()
-                .HasMany(a => a.Friends)
+            modelBuilder.Entity<FriendAccount>()
+                .HasOne(a => a.Friend)
                 .WithMany(a => a.Friends)
-                .Map(m =>
-                {
-                    m.ToTable("AccountFriends");
-                    m.MapLeftKey("AccountId");
-                    m.MapRightKey("FriendId");
-                });
+                .HasForeignKey(a => a.FriendId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<FriendAccount>()
+                .HasOne(a => a.Account)
+                .WithMany(a => a.Accounts)
+                .HasForeignKey(a => a.AccountId);
         }
     }
 }

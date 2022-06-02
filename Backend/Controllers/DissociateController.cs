@@ -24,12 +24,12 @@ namespace Dissociate.Controllers
             return HttpContext.Session.TryGetValue("UserId", out _);
         }
 
-        /*[HttpPost]
-        public async Task<ActionResult> Login([FromBody] LoginCreds loginCreds)
+        [HttpPost]
+        public ActionResult Login([FromBody] LoginCreds loginCreds)
         {
             if(!HasSession())
             {
-                var user = {UserName = "test"}; //await _context.Accounts.FirstOrDefaultAsync(a => a.Email == loginCreds.Email && a.Password == loginCreds.Password);
+                var user = _context.Accounts.FirstOrDefault(a => a.Email.Equals(loginCreds.Email) && a.Password.Equals(loginCreds.Password));
                 if(user != null)
                 {
                     HttpContext.Session.SetString("UserId", user.UserName);
@@ -44,6 +44,12 @@ namespace Dissociate.Controllers
             {
                 return Ok();
             }
-        }*/
+        }
+
+        [HttpGet]
+        public ActionResult<List<Account>> Test()
+        {
+            return _context.Accounts.ToList();
+        }
     }
 }

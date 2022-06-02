@@ -70,20 +70,66 @@ namespace Dissociate
                 context.Enrollments.Add(e);
             }
             context.SaveChanges();*/
+            /*
 
-            context.Accounts.Add(new Account
-            {
-                UserName = "admin",
-                Password = new byte[4] { 0x00, 0x00, 0x00, 0x00 },
-                Email = "admin@admin.com"
-            });
+                        var accountAdmin = new Account
+                        {
+                            UserName = "admin",
+                            Password = new byte[4] { 0x00, 0x00, 0x00, 0x00 },
+                            Email = "admin@admin"
+                        };
+
+
+                        var accountTest = new Account
+                        {
+                            UserName = "test",
+                            Password = new byte[4] { 0x00, 0x00, 0x00, 0x00 },
+                            Email = "test@test"
+                        };
+
+                        var friendAccountsAdmin = new List<FriendAccount>()
+                        {
+                            new FriendAccount
+                            {
+                                Account = accountAdmin,
+                                Friend = accountTest
+                            },
+                            new FriendAccount
+                            {
+                                Account = accountTest,
+                                Friend = accountAdmin
+                            }
+                        };
+
+                        var friendAccountsTest = new List<FriendAccount>()
+                        {
+                            new FriendAccount
+                            {
+                                Account = accountTest,
+                                Friend = accountAdmin
+                            },
+                            new FriendAccount
+                            {
+                                Account = accountAdmin,
+                                Friend = accountTest
+                            }
+                        };
+
+                        accountTest.Friends = friendAccountsTest;
+                        accountTest.Accounts = friendAccountsTest;
+
+                        accountAdmin.Friends = friendAccountsAdmin;
+                        accountAdmin.Accounts = friendAccountsAdmin;
+
+                        context.Accounts.Add(accountTest);
+                        context.Accounts.Add(accountAdmin);*/
 
             context.SaveChanges();
 
 
             context.Messages.Add(new Message
             {
-                Content = "Hello, world!",
+                Content = "Hello, planet!",
                 Date = DateTime.Now
             });
 

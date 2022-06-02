@@ -19,7 +19,8 @@ namespace Dissociate.Models
 
         public ICollection<AccountMessage> AccountMessages { get; set; }
 
-        public ICollection<Account> Friends { get; set; }
+        public ICollection<FriendAccount> Friends { get; set; }
 
+        public ICollection<FriendAccount> Accounts { get; set; }
     }
 }
