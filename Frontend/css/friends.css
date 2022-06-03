@@ -484,7 +484,7 @@ svg[id] {
     font-family: 'Roboto', Arial, sans-serif;
     position: relative;
     overflow: hidden;
-    margin: 10px;
+    margin: 23px;
     min-width: 230px;
     max-width: 315px;
     min-height: 450px;
@@ -583,4 +583,9 @@ svg[id] {
     font-size: 0.8em;
     letter-spacing: 1px;
     opacity: 0.8;
+}
+
+.button-deafen {
+    padding-top: 7px;
+    padding-left: 7px;
 }
