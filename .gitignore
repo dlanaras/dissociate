@@ -2,3 +2,6 @@ bin
 *.db
 *.sqlite
 *.dll
+/Backend/bin/
+.vscode/
+/Backend/obj/
