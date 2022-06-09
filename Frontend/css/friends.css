@@ -361,7 +361,7 @@ body {
 }
 
 .server.server-friends::after {
-    content: "2 ONLINE";
+    content: "6 ONLINE";
     color: rgba(255, 255, 255, 0.3);
     pointer-events: none;
     font-weight: 300;
