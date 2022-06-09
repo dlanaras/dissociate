@@ -36,26 +36,20 @@ services.AddCors(options =>
 
 var app = builder.Build();
 
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+
 app.UseHttpsRedirection();
+
+app.UseWebSockets();
 
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.UseCors();
-
-/*app.Use(async (context, next) =>
-{
-    if (context.WebSockets.IsWebSocketRequest)
-    {
-        using var webSocket = await context.WebSockets.AcceptWebSocketAsync();
-        await Echo(webSocket);
-    }
-    else
-    {
-        context.Response.StatusCode = StatusCodes.Status400BadRequest;
-    }
-});*/
 
 using(var scope = app.Services.CreateScope())
 {
@@ -72,3 +66,4 @@ using(var scope = app.Services.CreateScope())
 }
 
 app.Run();
+
