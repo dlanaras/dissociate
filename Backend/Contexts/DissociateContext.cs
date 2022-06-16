@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Dissociate.Models;
 
-namespace Backend.Contexts
+namespace Dissociate.Contexts
 {
     public partial class DissociateContext : DbContext
     {

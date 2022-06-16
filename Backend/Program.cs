@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Sqlite;
-//using Dissociate.Contexts;
+using Dissociate.Contexts;
 using Microsoft.Extensions.DependencyInjection;
 using Dissociate;
 
@@ -8,8 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 var services = builder.Services;
 
-/*services.AddDbContext<DissociateContext>(options =>
-                options.UseMySql("server=localhost;user=pma;password=pmapass;database=ef", new MySqlServerVersion(new Version(10, 7, 3)))); //TODO: add config file for this*/
+services.AddDbContext<DissociateContext>(options =>
+                options.UseMySql("server=localhost;user=pma;password=pmapass;database=ef", new MySqlServerVersion(new Version(10, 7, 3))));
 
 services.AddControllersWithViews();
 services.AddDistributedMemoryCache();
@@ -53,7 +53,7 @@ app.UseCors();
 
 using(var scope = app.Services.CreateScope())
 {
-    /*var dbContext = scope.ServiceProvider.GetRequiredService<DissociateContext>();
+    var dbContext = scope.ServiceProvider.GetRequiredService<DissociateContext>();
 
     try
     {
@@ -62,7 +62,7 @@ using(var scope = app.Services.CreateScope())
     catch (Exception ex)
     {
         throw new Exception("Error seeding the database", ex);
-    }*/
+    }
 }
 
 app.Run();

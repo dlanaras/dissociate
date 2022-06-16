@@ -1,4 +1,4 @@
-/*using Dissociate.Models;
+using Dissociate.Models;
 using System;
 using Microsoft.AspNetCore.Mvc;
 using Dissociate.Contexts;
@@ -30,10 +30,10 @@ namespace Dissociate.Controllers
         {
             if (!HasSession())
             {
-                var user = _context.Accounts.FirstOrDefault(a => a.Email.Equals(loginCreds.Email) && a.Password.Equals(loginCreds.Password));
+                var user = _context.TblUsers.FirstOrDefault(a => a.Email.Equals(loginCreds.Email) && a.Password.Equals(loginCreds.Password));
                 if (user != null)
                 {
-                    HttpContext.Session.SetString("UserId", user.UserName);
+                    HttpContext.Session.SetString("UserId", user.Username);
                     return Ok();
                 }
                 else
@@ -48,9 +48,15 @@ namespace Dissociate.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Message>> Test()
+        public ActionResult<List<TblMessage>> Test()
         {
-            return _context.Messages.ToList();
+            return _context.TblMessages.ToList();
+        }
+
+        [HttpGet]
+        public bool IsLoggedIn()
+        {
+            return HasSession();
         }
 
         [HttpGet]
@@ -97,11 +103,11 @@ namespace Dissociate.Controllers
 
         private void SaveMessageToDb(byte[] message)
         {
-            _context.Messages.Add(new Message
+            /*_context.Messages.Add(new Message
             {
                 Content = System.Text.Encoding.Default.GetString(message),
                 Date = DateTime.UtcNow
-            });
+            });*/
         }
     }
-}*/
+}
