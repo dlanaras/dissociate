@@ -62,3 +62,5 @@
 /home/dlanaras/Documents/VsCode/m326/Backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
 /home/dlanaras/Documents/VsCode/m326/Backend/bin/Debug/net6.0/appsettings.Development.json
 /home/dlanaras/Documents/VsCode/m326/Backend/bin/Debug/net6.0/appsettings.json
+/home/dlanaras/Documents/VsCode/m326/Backend/bin/Debug/net6.0/MySqlConnector.dll
+/home/dlanaras/Documents/VsCode/m326/Backend/bin/Debug/net6.0/Pomelo.EntityFrameworkCore.MySql.dll

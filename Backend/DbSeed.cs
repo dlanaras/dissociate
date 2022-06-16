@@ -1,4 +1,4 @@
-using Dissociate.Models;
+/*using Dissociate.Models;
 using System;
 using System.Linq;
 using Dissociate.Contexts;
@@ -123,7 +123,7 @@ namespace Dissociate
 
                         context.Accounts.Add(accountTest);
                         context.Accounts.Add(accountAdmin);*/
-
+/*
             context.SaveChanges();
 
 
@@ -144,4 +144,4 @@ namespace Dissociate
             context.SaveChanges();
         }
     }
-}
+}*/

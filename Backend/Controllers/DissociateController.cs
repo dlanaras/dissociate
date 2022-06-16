@@ -1,4 +1,4 @@
-using Dissociate.Models;
+/*using Dissociate.Models;
 using System;
 using Microsoft.AspNetCore.Mvc;
 using Dissociate.Contexts;
@@ -102,8 +102,6 @@ namespace Dissociate.Controllers
                 Content = System.Text.Encoding.Default.GetString(message),
                 Date = DateTime.UtcNow
             });
-
-
         }
     }
-}
+}*/
