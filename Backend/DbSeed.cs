@@ -17,6 +17,8 @@ namespace Dissociate
                 return;   // DB has been seeded
             }
 
+            Console.Write("TEST");
+
             // Add TblUsers
             var tblUsers = new TblUser[]
             {
@@ -33,6 +35,7 @@ namespace Dissociate
             };
 
             context.TblUsers.AddRange(tblUsers);
+            context.SaveChanges();
 
             // Add TblMessages
             var tblMessages = new TblMessage[]
@@ -47,11 +50,12 @@ namespace Dissociate
                      IdReceiveUser = 2,
                      IdSendUser = 1,
                      MessageContent = "Hello",
-                     SendTime = DateTime.Now.Subtract(TimeSpan.FromDays(10000000))
+                     SendTime = DateTime.Now.AddDays(1)
                 }
             };
 
             context.TblMessages.AddRange(tblMessages);
+            context.SaveChanges();
         }
     }
 }

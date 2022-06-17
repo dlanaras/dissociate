@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
 
 services.AddDbContext<DissociateContext>(options =>
-                options.UseMySql("server=localhost;user=pma;password=pmapass;database=ef", new MySqlServerVersion(new Version(10, 7, 3))));
+                options.UseMySql("server=localhost;user=pma;password=pmapass;database=dissociate", new MySqlServerVersion(new Version(10, 7, 3))));
 
 services.AddControllersWithViews();
 services.AddDistributedMemoryCache();
@@ -40,6 +40,8 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
+
+app.UseSession();
 
 app.UseHttpsRedirection();
 

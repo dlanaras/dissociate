@@ -48,15 +48,60 @@ namespace Dissociate.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<TblMessage>> Test()
+        public ActionResult<List<TblUserDto>> GetUsers()
         {
-            return _context.TblMessages.ToList();
+            if (!HasSession())
+            {
+                return Unauthorized();
+            }
+
+            var users = _context.TblUsers.ToList();
+
+            var userDtos = new List<TblUserDto>();
+            foreach (var user in users)
+            {
+                userDtos.Add(new TblUserDto(user));
+            }
+            return userDtos;
+        }
+
+        [HttpGet]
+        public ActionResult<List<TblMessageDto>> GetMessagesBetweenUsers(int idUser1, int idUser2)
+        {
+            if (!HasSession())
+            {
+                return Unauthorized();
+            }
+
+            var messages = _context.TblMessages
+                .Where(a => (a.IdReceiveUser == idUser1 && a.IdSendUser == idUser2) ||
+                (a.IdReceiveUser == idUser2 && a.IdSendUser == idUser1))
+                .ToList();
+
+            List<TblMessageDto> messagesDto = new List<TblMessageDto>();
+
+            foreach (var message in messages)
+            {
+                messagesDto.Add(new TblMessageDto(message));
+            }
+
+            return messagesDto;
         }
 
         [HttpGet]
         public bool IsLoggedIn()
         {
             return HasSession();
+        }
+
+        [HttpDelete]
+        public void Loggout()
+        {
+            HttpContext.Session.Clear();
+            if (Request.Cookies[".AspNetCore.Session"] != null)
+            {
+                Response.Cookies.Delete(".AspNetCore.Session");
+            }
         }
 
         [HttpGet]
@@ -97,7 +142,7 @@ namespace Dissociate.Controllers
                 receiveResult.CloseStatus.Value,
                 receiveResult.CloseStatusDescription,
                 CancellationToken.None);
-            
+
             await _context.SaveChangesAsync();
         }
 
