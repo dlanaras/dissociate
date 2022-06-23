@@ -66,7 +66,7 @@ namespace Dissociate.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<TblMessageDto>> GetMessagesBetweenUsers(int idUser1, int idUser2)
+        public ActionResult<List<TblMessageDto>> GetMessagesBetweenUsers(int senderId, int recieverId)
         {
             if (!HasSession())
             {
@@ -74,8 +74,8 @@ namespace Dissociate.Controllers
             }
 
             var messages = _context.TblMessages
-                .Where(a => (a.IdReceiveUser == idUser1 && a.IdSendUser == idUser2) ||
-                (a.IdReceiveUser == idUser2 && a.IdSendUser == idUser1))
+                .Where(a => (a.IdReceiveUser == senderId && a.IdSendUser == recieverId) ||
+                (a.IdReceiveUser == recieverId && a.IdSendUser == senderId))
                 .ToList();
 
             List<TblMessageDto> messagesDto = new List<TblMessageDto>();
@@ -105,12 +105,12 @@ namespace Dissociate.Controllers
         }
 
         [HttpGet]
-        public async Task Ws()
+        public async Task Ws(int senderId, int recieverId)
         {
             if (HttpContext.WebSockets.IsWebSocketRequest)
             {
                 using var webSocket = await HttpContext.WebSockets.AcceptWebSocketAsync();
-                await Echo(webSocket);
+                await Echo(webSocket, senderId, recieverId);
             }
             else
             {
@@ -118,7 +118,7 @@ namespace Dissociate.Controllers
             }
         }
 
-        private async Task Echo(WebSocket webSocket)
+        private async Task Echo(WebSocket webSocket, int senderId, int recieverId)
         {
             var bugger = new byte[1024 * 4];
             var receiveResult = await webSocket.ReceiveAsync(
@@ -126,7 +126,14 @@ namespace Dissociate.Controllers
 
             while (!receiveResult.CloseStatus.HasValue)
             {
-                SaveMessageToDb(bugger);
+
+
+
+                Byte[] deBugger = bugger.Where(b => b != 0).ToArray();
+ 
+                string messageContent = System.Text.Encoding.UTF8.GetString(deBugger);
+
+                SaveMessageToDb(messageContent, senderId, recieverId);
 
                 await webSocket.SendAsync(
                     new ArraySegment<byte>(bugger, 0, receiveResult.Count),
@@ -146,13 +153,19 @@ namespace Dissociate.Controllers
             await _context.SaveChangesAsync();
         }
 
-        private void SaveMessageToDb(byte[] message)
+        private async void SaveMessageToDb(string messageContent, int senderId, int recieverId)
         {
-            /*_context.Messages.Add(new Message
-            {
-                Content = System.Text.Encoding.Default.GetString(message),
-                Date = DateTime.UtcNow
-            });*/
+            var message = new TblMessage
+                {
+                    MessageContent = messageContent,
+                    SendTime = DateTime.UtcNow,
+                    IdReceiveUser = recieverId,
+                    IdSendUser = senderId
+                };
+
+            await _context.TblMessages.AddAsync(message);
+
+            await _context.SaveChangesAsync();
         }
     }
 }

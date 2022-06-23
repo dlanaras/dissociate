@@ -25,11 +25,12 @@ CREATE TABLE IF NOT EXISTS tbl_friendaccount (
 -- Create table dissociate.tbl_user_role
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS tbl_messages (
+    id_message INT NOT NULL AUTO_INCREMENT,
     id_receiveUser INT NOT NULL,
     id_sendUser INT NOT NULL,
-    messageContent VARCHAR(45) NULL,
+    messageContent VARCHAR(255) NOT NULL,
     sendTime DATETIME NULL,
-    PRIMARY KEY (id_receiveUser, id_sendUser),
+    PRIMARY KEY (id_message),
     INDEX fk_tbl_user_has_tbl_user_tbl_user3_idx (id_sendUser ASC) VISIBLE,
     INDEX fk_tbl_user_has_tbl_user_tbl_user2_idx (id_receiveUser ASC) VISIBLE,
     FOREIGN KEY (id_receiveUser) REFERENCES tbl_user (id_user) ON DELETE NO ACTION ON UPDATE NO ACTION,

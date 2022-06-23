@@ -12,7 +12,7 @@ namespace Dissociate
             context.Database.EnsureCreated();
 
             // Look for any students.
-            if (context.TblMessages.Any())
+            if (context.TblUsers.Any())
             {
                 return;   // DB has been seeded
             }
