@@ -57,6 +57,9 @@ Um Unser Programm noch besser zu beschreiben haben wir zwei Sequenzdiagramme gem
 Dieses holt alle Nachrichten einer Konversation.
 ![image](https://user-images.githubusercontent.com/81744349/177603093-75f0c3cc-a1db-4a22-a4df-4a55fa8f9a18.png)
 
+Dieses überprüft das Login.
+![image](https://user-images.githubusercontent.com/81744349/177606846-4e893164-0cd8-4706-ba26-24c10fa6fce8.png)
+
 
 #TBD
 
