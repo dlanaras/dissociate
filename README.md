@@ -61,19 +61,19 @@ Dieses überprüft das Login.
 ![image](https://user-images.githubusercontent.com/81744349/177606846-4e893164-0cd8-4706-ba26-24c10fa6fce8.png)
 
 
-#TBD
-
 ### Use Case Diagramm
 
 Wir haben auch ein Use Case Diagramm gemacht.
+![image](https://user-images.githubusercontent.com/81744349/177624343-893b36d3-1ab0-48da-9c48-da61c354f718.png)
 
-#TBD
+
 
 ### Aktivitätsdiagramm
 
 Als letztes haben wir noch ein Aktivitätsdiagramm gezeichnet.
+![image](https://user-images.githubusercontent.com/81744349/177624285-02cb1d88-6f89-4357-a539-d33ebfc4ff27.png)
 
-#TBD
+
 
 ### ERD Diagramm
 
