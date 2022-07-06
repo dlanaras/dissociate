@@ -71,6 +71,7 @@ Als letztes haben wir noch ein Aktivitätsdiagramm gezeichnet.
 ### ERD Diagramm
 
 Zur Vollständigkeit ist hier noch unser ERD Diagramm.
+![image](https://user-images.githubusercontent.com/81744349/177550686-606a7b2f-a8d3-46c3-b24d-44e02b6954a8.png)
 
 
 ### Reflexion
