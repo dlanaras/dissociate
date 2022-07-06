@@ -54,6 +54,10 @@ Aus den CRC Cards konnten wir so ziemlich unser Klassendiagramm einfach zusammen
 
 Um Unser Programm noch besser zu beschreiben haben wir zwei Sequenzdiagramme gemacht.
 
+Dieses holt alle Nachrichten einer Konversation.
+![image](https://user-images.githubusercontent.com/81744349/177603093-75f0c3cc-a1db-4a22-a4df-4a55fa8f9a18.png)
+
+
 #TBD
 
 ### Use Case Diagramm
@@ -73,5 +77,12 @@ Als letztes haben wir noch ein Aktivitätsdiagramm gezeichnet.
 Zur Vollständigkeit ist hier noch unser ERD Diagramm.
 ![image](https://user-images.githubusercontent.com/81744349/177550686-606a7b2f-a8d3-46c3-b24d-44e02b6954a8.png)
 
+### Design Pattern
+
+Wir haben 2 respektive 3 Patterns implementiert.
+
+Der DBContext ist ein Singleton da wir ihn natürlich nur eine Instanz davon brauchen.
+Das Facade Pattern benutzen wir in dem wir im Controller auf den Context zugreifen obwohl andere Klassen nur auf den Controller zugreifen.
+Dazu wenn man das Entity Framework benutzt implementiert man automatisch das Repository Pattern.
 
 ### Reflexion
