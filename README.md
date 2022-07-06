@@ -48,3 +48,29 @@ Wir haben den User und Nachricht wie in der Verben/Substantiven Methode herausge
 ### Klassendiagramm
 
 Aus den CRC Cards konnten wir so ziemlich unser Klassendiagramm einfach zusammenlegen. 
+![image](https://user-images.githubusercontent.com/81744349/177548916-2f656399-3234-42ec-8b24-79021381b5e7.png)
+
+### Sequenzdiagramme
+
+Um Unser Programm noch besser zu beschreiben haben wir zwei Sequenzdiagramme gemacht.
+
+#TBD
+
+### Use Case Diagramm
+
+Wir haben auch ein Use Case Diagramm gemacht.
+
+#TBD
+
+### Aktivitätsdiagramm
+
+Als letztes haben wir noch ein Aktivitätsdiagramm gezeichnet.
+
+#TBD
+
+### ERD Diagramm
+
+Zur Vollständigkeit ist hier noch unser ERD Diagramm.
+
+
+### Reflexion
