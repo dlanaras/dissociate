@@ -90,3 +90,5 @@ Das Facade Pattern benutzen wir in dem wir im Controller auf den Context zugreif
 Dazu wenn man das Entity Framework benutzt implementiert man automatisch das Repository Pattern.
 
 ### Reflexion
+
+Wir denken unser Projekt ist uns für diese kurze Zeit sehr gut gelungen. Manchmal gab es Kommunikationsschwierigkeiten jedoch konnten wir diese immer bewältigen. Wir hätten vielleicht mehr zu Anfang des Projektes arbeiten sollen damit wir am schluss nicht mehr so viel haben. Jedoch funktioniert in unserem Projekt die Hauptfunktion das chatten und wir konnten vor allem von den UMLs profitieren. Manchmal war es schwer sich ganz genau an die UMLs zu halten. Im Team war die Arbeit immer gut aufgeteilt. Schwer war für uns eigentlich nichts da alles soweit klar war. 
